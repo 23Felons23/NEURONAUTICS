@@ -113,6 +113,7 @@ python -m app [options]
 | `--no-hand-tracking` | `hand_tracking` | Flag | Disables webcam-based hand gesture controls (which are enabled by default; requires `[tracking]` dependencies). |
 
 ### CLI Examples
+*The manifest file is a better option most of the times, read below*
 
 1. **Launch with T1 MRI only (opens interactive Orthogonal slice planes):**
    ```bash
@@ -138,9 +139,9 @@ python -m app [options]
 
 ---
 
-## 3. The Patient Manifest File (`manifest.json`)
+## 3. The Manifest File (`manifest.json`)
 
-The patient manifest is a JSON file that bundles all multi-modal neuroimaging datasets, rendering styles, colors, and thresholds for a patient. 
+The dataset manifest is a JSON file that bundles all multi-modal neuroimaging datasets, rendering styles, colors, and thresholds for a dataset. 
 
 ### Why Use a Manifest?
 - **Relative Path Resolution:** All data file paths are resolved relative to the manifest file's containing directory. This makes patient data folders fully portable.
@@ -150,7 +151,7 @@ The patient manifest is a JSON file that bundles all multi-modal neuroimaging da
 
 ### Complete `manifest.json` Example
 
-Place this file (e.g., `patient_manifest.json`) in the same root folder as your patient's `mri/` and `connectome/` subdirectories:
+Place this file (e.g., `manifest.json`) in the same root folder as your dataset `mri/` and `connectome/` subdirectories:
 
 ```json
 {
