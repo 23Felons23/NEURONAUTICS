@@ -139,7 +139,7 @@ python -m app [options]
 
 ---
 
-## 3. The Manifest File (`manifest.json`)
+## 3. The Manifest File (`manifest.json`)  * RECOMMENDED *
 
 The dataset manifest is a JSON file that bundles all multi-modal neuroimaging datasets, rendering styles, colors, and thresholds for a dataset. 
 
@@ -210,6 +210,8 @@ Place this file (e.g., `manifest.json`) in the same root folder as your dataset 
 * **`tumor_opacity`** (`float`, default: `0.6`): Opacity transparency level of the tumor visualization.
 * **`tumor_line_width`** (`float`, default: `1.5`): Line width weight of the tumor network segments.
 * **`tumor_num_nodes`** (`int`, default: `1500`): Maximum target nodes to sample from the tumor mask boundary for Dijkstra network construction.
+
+> **Note**: A fake tumor is available in the repo under the name `tumor_fake.nii.gz`. You can use it to test the tumor visualization capabilities of the app by adding it to your `manifest.json`.
 
 ---
 
